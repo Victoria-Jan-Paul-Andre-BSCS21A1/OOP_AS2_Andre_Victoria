@@ -6,11 +6,11 @@ namespace WindowsFormsApp1
 {
     public class User
     {
-        private List<Identity> _userList;
+        private List<Identity> userContainer;
 
         public User()
         {
-            _userList = new List<Identity>();
+            userContainer = new List<Identity>();
         }
 
         public void LoadUsersFromJson(string filePath)
@@ -18,13 +18,13 @@ namespace WindowsFormsApp1
             if (File.Exists(filePath))
             {
                 var json = File.ReadAllText(filePath);
-                _userList = JsonSerializer.Deserialize<List<Identity>>(json);
+                userContainer = JsonSerializer.Deserialize<List<Identity>>(json);
             }
         }
 
         public bool IsValid(string username, string password)
         {
-            foreach (var user in _userList)
+            foreach (var user in userContainer)
             {
                 if (user.Username == username && user.Password == password)
                 {

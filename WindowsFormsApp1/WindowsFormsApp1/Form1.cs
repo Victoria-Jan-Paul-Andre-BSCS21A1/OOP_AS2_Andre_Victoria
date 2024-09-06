@@ -8,14 +8,14 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        private User _userManager;
+        private User userInfo;
 
         public Form1()
         {
             InitializeComponent();
-            _userManager = new User();
-            string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "C:\\Users\\Andre Victoria\\Documents\\OOP_AS2\\OOP_AS2_Andre_Victoria\\WindowsFormsApp1\\WindowsFormsApp1\\users.json");
-            _userManager.LoadUsersFromJson(jsonFilePath);
+            userInfo = new User();
+            string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "C:\\Users\\Andre Victoria\\Documents\\OOP_AS2\\OOP_AS2_Andre_Victoria\\WindowsFormsApp1\\WindowsFormsApp1\\info.json");
+            userInfo.LoadUsersFromJson(jsonFilePath);
             button1.Click += new EventHandler(btnLogin_Click);
         }
 
@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
             var username = textUsername.Text;
             var password = textPassword.Text;
 
-            if (_userManager.IsValid(username, password))
+            if (userInfo.IsValid(username, password))
             {
                 labelMessage.Text = "Login successful!";
                 labelMessage.ForeColor = System.Drawing.Color.Green;
