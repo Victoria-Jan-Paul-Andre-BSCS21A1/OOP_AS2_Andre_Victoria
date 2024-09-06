@@ -70,6 +70,7 @@
             this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Username";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label2
             // 
@@ -80,15 +81,17 @@
             this.label2.Size = new System.Drawing.Size(83, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Password";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelMessage
             // 
             this.labelMessage.AutoSize = true;
             this.labelMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelMessage.Location = new System.Drawing.Point(593, 324);
+            this.labelMessage.Location = new System.Drawing.Point(575, 319);
             this.labelMessage.Name = "labelMessage";
             this.labelMessage.Size = new System.Drawing.Size(0, 20);
             this.labelMessage.TabIndex = 5;
+            this.labelMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 

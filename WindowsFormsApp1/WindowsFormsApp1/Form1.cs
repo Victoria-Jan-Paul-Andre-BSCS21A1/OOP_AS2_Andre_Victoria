@@ -26,12 +26,12 @@ namespace WindowsFormsApp1
 
             if (userInfo.IsValid(username, password))
             {
-                labelMessage.Text = "Login successful!";
+                labelMessage.Text = "Galing mo Bossing!";
                 labelMessage.ForeColor = System.Drawing.Color.Green;
             }
             else
             {
-                labelMessage.Text = "Invalid username or password.";
+                labelMessage.Text = "Maliii ka Bossing!";
                 labelMessage.ForeColor = System.Drawing.Color.Red;
             }
         }
